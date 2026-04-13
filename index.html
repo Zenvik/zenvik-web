@@ -13,7 +13,12 @@
     <header class="site-header">
       <div class="container nav">
         <div class="brand-wrap">
-          <div class="brand-mark">Z</div>
+          <div class="brand-logo">
+            <div class="brand-ring outer"></div>
+            <div class="brand-ring middle"></div>
+            <div class="brand-ring inner"></div>
+            <div class="brand-core">Z</div>
+          </div>
           <div class="brand-text">Zenvik</div>
         </div>
         <div class="nav-right">
@@ -22,7 +27,10 @@
             <a href="#about" data-i18n="nav.about">Nosotros</a>
             <a href="#contact" data-i18n="nav.contact">Contacto</a>
           </nav>
-          <button id="lang-toggle" class="lang-toggle">EN</button>
+          <div class="lang-switch" id="lang-switch">
+            <button class="lang-option active" data-lang="es"><span>🇪🇸</span><strong>ES</strong></button>
+            <button class="lang-option" data-lang="en"><span>🇺🇸</span><strong>EN</strong></button>
+          </div>
         </div>
       </div>
     </header>
@@ -32,23 +40,31 @@
         <div class="container hero-grid">
           <div class="hero-copy">
             <p class="eyebrow" data-i18n="hero.eyebrow">Soluciones digitales para operación, control y trazabilidad</p>
-            <h1 data-i18n="hero.title">Tecnología que convierte los datos operativos en mejores decisiones.</h1>
+            <h1 data-i18n="hero.title">Tecnología que impulsa procesos con visibilidad, control e inteligencia operativa.</h1>
             <p class="hero-text" data-i18n="hero.text">
-              Zenvik desarrolla herramientas tecnológicas para empresas que necesitan visibilidad, control e información en tiempo real. Combinamos software, dashboards y lógica operativa para crear soluciones adaptadas a cada proceso.
+              Zenvik desarrolla herramientas tecnológicas para empresas que necesitan visibilidad, control e información en tiempo real. Creamos soluciones web, sistemas de monitoreo y plataformas de trazabilidad adaptadas al flujo real de cada operación.
             </p>
             <div class="hero-actions">
               <a class="btn btn-primary" href="#services" data-i18n="hero.cta1">Explorar servicios</a>
               <a class="btn btn-secondary" href="#contact" data-i18n="hero.cta2">Contáctanos</a>
             </div>
+            <div class="hero-points">
+              <div class="hero-point"><strong data-i18n="hero.point1.title">Monitoreo en tiempo real</strong><span data-i18n="hero.point1.text">Información útil para decisiones más rápidas.</span></div>
+              <div class="hero-point"><strong data-i18n="hero.point2.title">Dashboards y control</strong><span data-i18n="hero.point2.text">Indicadores claros para supervisión operativa.</span></div>
+              <div class="hero-point"><strong data-i18n="hero.point3.title">Software a la medida</strong><span data-i18n="hero.point3.text">Soluciones adaptadas a cada proceso.</span></div>
+            </div>
           </div>
           <div class="hero-card">
-            <div class="brand-symbol">
-              <span></span>
-              <span></span>
-              <span></span>
+            <div class="hero-logo-showcase">
+              <div class="brand-logo large">
+                <div class="brand-ring outer"></div>
+                <div class="brand-ring middle"></div>
+                <div class="brand-ring inner"></div>
+                <div class="brand-core">Z</div>
+              </div>
             </div>
-            <h2 data-i18n="hero.cardTitle">Plataformas personalizadas para operaciones reales</h2>
-            <p data-i18n="hero.cardText">Desde captura de datos en campo hasta dashboards web y monitoreo en vivo, Zenvik ayuda a digitalizar procesos con claridad, control y adaptabilidad.</p>
+            <h2 data-i18n="hero.cardTitle">Plataformas digitales para operaciones reales</h2>
+            <p data-i18n="hero.cardText">Desde captura de datos hasta dashboards ejecutivos y trazabilidad, Zenvik conecta el terreno, la operación y la toma de decisiones en una sola experiencia tecnológica.</p>
           </div>
         </div>
       </section>
@@ -58,7 +74,7 @@
         <h2 data-i18n="services.title">Soluciones diseñadas para entornos operativos reales</h2>
         <div class="services-grid">
           <article class="service-card">
-            <img src="./assets/images/web.jpg" alt="Servicio de desarrollo web personalizado">
+            <img src="./assets/images/web.jpg?v=2" alt="Servicio de desarrollo web personalizado">
             <div class="service-content">
               <h3 data-i18n="services.web.title">Desarrollo Web Personalizado</h3>
               <p data-i18n="services.web.text">Diseño y desarrollo de plataformas web a la medida para operaciones internas, flujos de servicio, reportes y procesos digitales específicos de cada negocio.</p>
@@ -71,7 +87,7 @@
           </article>
 
           <article class="service-card">
-            <img src="./assets/images/transport.jpg" alt="Servicio de tracking GPS para transporte público">
+            <img src="./assets/images/transport.jpg?v=2" alt="Servicio de tracking GPS para transporte público">
             <div class="service-content">
               <h3 data-i18n="services.transport.title">Tracking GPS y Monitoreo en Tiempo Real</h3>
               <p data-i18n="services.transport.text">Sistemas de monitoreo GPS en tiempo real para transporte público y flotas operativas, con dashboards dinámicos para supervisión, análisis de rutas y control del personal.</p>
@@ -84,7 +100,7 @@
           </article>
 
           <article class="service-card">
-            <img src="./assets/images/traceability.jpg" alt="Servicio de trazabilidad para frigoríficos y plantas de proceso">
+            <img src="./assets/images/traceability.jpg?v=2" alt="Servicio de trazabilidad para frigoríficos y plantas de proceso">
             <div class="service-content">
               <h3 data-i18n="services.trace.title">Trazabilidad para Frigoríficos y Plantas de Proceso</h3>
               <p data-i18n="services.trace.text">Herramienta integral para capturar, controlar y visualizar en tiempo real la información de animales y productos a lo largo de cada etapa del proceso, fortaleciendo la trazabilidad y el control operativo.</p>
@@ -111,12 +127,33 @@
         </div>
       </section>
 
-      <section id="contact" class="section container contact-box">
-        <p class="section-label" data-i18n="contact.label">Contacto</p>
-        <h2 data-i18n="contact.title">¿Listo para construir una solución alrededor de tu proceso?</h2>
-        <p data-i18n="contact.text">Conversemos sobre tu operación, tu flujo de información y el tipo de sistema que realmente necesita tu equipo.</p>
-        <a class="btn btn-primary" href="mailto:eduardo.jose881@gmail.com?subject=Zenvik%20Inquiry" data-i18n="contact.cta">Escríbenos</a>
-      </section>
+      <footer id="contact" class="site-footer">
+        <div class="container footer-grid">
+          <div>
+            <div class="brand-wrap footer-brand">
+              <div class="brand-logo small">
+                <div class="brand-ring outer"></div>
+                <div class="brand-ring middle"></div>
+                <div class="brand-ring inner"></div>
+                <div class="brand-core">Z</div>
+              </div>
+              <div class="brand-text">Zenvik</div>
+            </div>
+            <p data-i18n="footer.text">Soluciones tecnológicas para trazabilidad, monitoreo operativo y plataformas digitales personalizadas.</p>
+          </div>
+          <div>
+            <p class="footer-title" data-i18n="footer.services">Servicios</p>
+            <a href="#services" data-i18n="footer.s1">Desarrollo web</a>
+            <a href="#services" data-i18n="footer.s2">Tracking GPS</a>
+            <a href="#services" data-i18n="footer.s3">Trazabilidad</a>
+          </div>
+          <div>
+            <p class="footer-title" data-i18n="footer.contact">Contacto</p>
+            <a href="mailto:eduardo.jose881@gmail.com">eduardo.jose881@gmail.com</a>
+            <a href="https://github.com/EDuarP" target="_blank">GitHub</a>
+          </div>
+        </div>
+      </footer>
     </main>
 
     <script src="script.js"></script>

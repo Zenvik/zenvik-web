@@ -4,12 +4,18 @@ const translations = {
     'nav.about': 'Nosotros',
     'nav.contact': 'Contacto',
     'hero.eyebrow': 'Soluciones digitales para operación, control y trazabilidad',
-    'hero.title': 'Tecnología que convierte los datos operativos en mejores decisiones.',
-    'hero.text': 'Zenvik desarrolla herramientas tecnológicas para empresas que necesitan visibilidad, control e información en tiempo real. Combinamos software, dashboards y lógica operativa para crear soluciones adaptadas a cada proceso.',
+    'hero.title': 'Tecnología que impulsa procesos con visibilidad, control e inteligencia operativa.',
+    'hero.text': 'Zenvik desarrolla herramientas tecnológicas para empresas que necesitan visibilidad, control e información en tiempo real. Creamos soluciones web, sistemas de monitoreo y plataformas de trazabilidad adaptadas al flujo real de cada operación.',
     'hero.cta1': 'Explorar servicios',
     'hero.cta2': 'Contáctanos',
-    'hero.cardTitle': 'Plataformas personalizadas para operaciones reales',
-    'hero.cardText': 'Desde captura de datos en campo hasta dashboards web y monitoreo en vivo, Zenvik ayuda a digitalizar procesos con claridad, control y adaptabilidad.',
+    'hero.point1.title': 'Monitoreo en tiempo real',
+    'hero.point1.text': 'Información útil para decisiones más rápidas.',
+    'hero.point2.title': 'Dashboards y control',
+    'hero.point2.text': 'Indicadores claros para supervisión operativa.',
+    'hero.point3.title': 'Software a la medida',
+    'hero.point3.text': 'Soluciones adaptadas a cada proceso.',
+    'hero.cardTitle': 'Plataformas digitales para operaciones reales',
+    'hero.cardText': 'Desde captura de datos hasta dashboards ejecutivos y trazabilidad, Zenvik conecta el terreno, la operación y la toma de decisiones en una sola experiencia tecnológica.',
     'services.label': 'Servicios',
     'services.title': 'Soluciones diseñadas para entornos operativos reales',
     'services.web.title': 'Desarrollo Web Personalizado',
@@ -31,22 +37,30 @@ const translations = {
     'about.title': 'Diseñada para conectar el software con la operación real.',
     'about.text1': 'Zenvik se enfoca en desarrollar soluciones digitales que ayudan a las organizaciones a monitorear procesos, centralizar información y mejorar el control operativo. Nuestro enfoque es práctico, adaptable y alineado con la realidad de cada cliente.',
     'about.text2': 'Trabajamos en sectores donde la trazabilidad, los dashboards, la visibilidad del proceso y las interfaces inteligentes generan valor medible.',
-    'contact.label': 'Contacto',
-    'contact.title': '¿Listo para construir una solución alrededor de tu proceso?',
-    'contact.text': 'Conversemos sobre tu operación, tu flujo de información y el tipo de sistema que realmente necesita tu equipo.',
-    'contact.cta': 'Escríbenos'
+    'footer.text': 'Soluciones tecnológicas para trazabilidad, monitoreo operativo y plataformas digitales personalizadas.',
+    'footer.services': 'Servicios',
+    'footer.s1': 'Desarrollo web',
+    'footer.s2': 'Tracking GPS',
+    'footer.s3': 'Trazabilidad',
+    'footer.contact': 'Contacto'
   },
   en: {
     'nav.services': 'Services',
     'nav.about': 'About',
     'nav.contact': 'Contact',
     'hero.eyebrow': 'Digital solutions for operations, control, and traceability',
-    'hero.title': 'Technology that transforms operational data into better decisions.',
-    'hero.text': 'Zenvik builds digital tools for organizations that need visibility, control, and real-time information. We combine software, dashboards, and operational logic to create solutions tailored to each process.',
+    'hero.title': 'Technology that powers processes with visibility, control, and operational intelligence.',
+    'hero.text': 'Zenvik builds digital tools for organizations that need visibility, control, and real-time information. We create web solutions, monitoring systems, and traceability platforms adapted to the real flow of each operation.',
     'hero.cta1': 'Explore services',
     'hero.cta2': 'Contact us',
-    'hero.cardTitle': 'Custom platforms for real operations',
-    'hero.cardText': 'From field data capture to web dashboards and live monitoring, Zenvik helps organizations digitize processes with clarity, control, and adaptability.',
+    'hero.point1.title': 'Real-time monitoring',
+    'hero.point1.text': 'Useful information for faster decisions.',
+    'hero.point2.title': 'Dashboards and control',
+    'hero.point2.text': 'Clear indicators for operational supervision.',
+    'hero.point3.title': 'Custom software',
+    'hero.point3.text': 'Solutions tailored to each process.',
+    'hero.cardTitle': 'Digital platforms for real operations',
+    'hero.cardText': 'From data capture to executive dashboards and traceability, Zenvik connects the field, the operation, and decision-making in one technology experience.',
     'services.label': 'Services',
     'services.title': 'Solutions designed for real operational environments',
     'services.web.title': 'Custom Web Solutions',
@@ -68,28 +82,25 @@ const translations = {
     'about.title': 'Built to connect software with real operations.',
     'about.text1': 'Zenvik focuses on developing digital solutions that help organizations monitor processes, centralize information, and improve operational control. Our approach is practical, adaptable, and aligned with each client\'s reality.',
     'about.text2': 'We work in sectors where traceability, dashboards, process visibility, and intelligent interfaces generate measurable value.',
-    'contact.label': 'Contact',
-    'contact.title': 'Ready to build a solution around your process?',
-    'contact.text': 'Let\'s talk about your operation, your information flow, and the kind of system your team actually needs.',
-    'contact.cta': 'Get in touch'
+    'footer.text': 'Technology solutions for traceability, operational monitoring, and custom digital platforms.',
+    'footer.services': 'Services',
+    'footer.s1': 'Web development',
+    'footer.s2': 'GPS tracking',
+    'footer.s3': 'Traceability',
+    'footer.contact': 'Contact'
   }
 };
 
-const toggle = document.getElementById('lang-toggle');
-let currentLang = 'es';
+const buttons = document.querySelectorAll('.lang-option');
 
 function applyLanguage(lang) {
-  currentLang = lang;
   document.documentElement.lang = lang;
   document.querySelectorAll('[data-i18n]').forEach((el) => {
     const key = el.dataset.i18n;
     if (translations[lang][key]) el.textContent = translations[lang][key];
   });
-  toggle.textContent = lang === 'es' ? 'EN' : 'ES';
+  buttons.forEach((btn) => btn.classList.toggle('active', btn.dataset.lang === lang));
 }
 
-toggle.addEventListener('click', () => {
-  applyLanguage(currentLang === 'es' ? 'en' : 'es');
-});
-
+buttons.forEach((btn) => btn.addEventListener('click', () => applyLanguage(btn.dataset.lang)));
 applyLanguage('es');
