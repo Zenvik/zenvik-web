@@ -33,6 +33,11 @@ body {
   align-items: center;
   padding: 18px 0;
 }
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
 .brand-wrap {
   display: flex;
   align-items: center;
@@ -51,6 +56,15 @@ body {
 .brand-text { font-weight: 800; font-size: 1.1rem; }
 nav { display: flex; gap: 24px; }
 nav a { color: var(--text); text-decoration: none; font-weight: 600; }
+.lang-toggle {
+  background: var(--dark);
+  color: white;
+  border: 0;
+  border-radius: 999px;
+  padding: 10px 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
 .hero {
   padding: 80px 0 48px;
   background: linear-gradient(180deg, #f8fbfb 0%, #ffffff 100%);
@@ -172,6 +186,7 @@ h2 {
 @media (max-width: 640px) {
   .container { width: min(100% - 24px, 1140px); }
   .nav { flex-direction: column; gap: 14px; align-items: flex-start; }
+  .nav-right { width: 100%; flex-direction: column; align-items: flex-start; }
   nav { flex-wrap: wrap; gap: 14px; }
   .hero { padding-top: 42px; }
   .hero-actions { flex-direction: column; }

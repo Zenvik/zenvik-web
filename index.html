@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Zenvik | Digital Solutions</title>
+    <title>Zenvik | Soluciones Digitales</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -16,11 +16,14 @@
           <div class="brand-mark">Z</div>
           <div class="brand-text">Zenvik</div>
         </div>
-        <nav>
-          <a href="#services">Services</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
-        </nav>
+        <div class="nav-right">
+          <nav>
+            <a href="#services" data-i18n="nav.services">Servicios</a>
+            <a href="#about" data-i18n="nav.about">Nosotros</a>
+            <a href="#contact" data-i18n="nav.contact">Contacto</a>
+          </nav>
+          <button id="lang-toggle" class="lang-toggle">EN</button>
+        </div>
       </div>
     </header>
 
@@ -28,14 +31,14 @@
       <section class="hero">
         <div class="container hero-grid">
           <div class="hero-copy">
-            <p class="eyebrow">Digital solutions for operations, control, and traceability</p>
-            <h1>Technology that transforms operational data into better decisions.</h1>
-            <p class="hero-text">
-              Zenvik builds practical digital tools for companies that need visibility, control, and real-time information. We combine software, dashboards, and operational logic to create solutions that fit each process.
+            <p class="eyebrow" data-i18n="hero.eyebrow">Soluciones digitales para operación, control y trazabilidad</p>
+            <h1 data-i18n="hero.title">Tecnología que convierte los datos operativos en mejores decisiones.</h1>
+            <p class="hero-text" data-i18n="hero.text">
+              Zenvik desarrolla herramientas tecnológicas para empresas que necesitan visibilidad, control e información en tiempo real. Combinamos software, dashboards y lógica operativa para crear soluciones adaptadas a cada proceso.
             </p>
             <div class="hero-actions">
-              <a class="btn btn-primary" href="#services">Explore Services</a>
-              <a class="btn btn-secondary" href="#contact">Contact Us</a>
+              <a class="btn btn-primary" href="#services" data-i18n="hero.cta1">Explorar servicios</a>
+              <a class="btn btn-secondary" href="#contact" data-i18n="hero.cta2">Contáctanos</a>
             </div>
           </div>
           <div class="hero-card">
@@ -44,51 +47,51 @@
               <span></span>
               <span></span>
             </div>
-            <h2>Custom platforms for real operations</h2>
-            <p>From field data capture to web dashboards and live monitoring, Zenvik helps organizations digitize workflows with clarity and control.</p>
+            <h2 data-i18n="hero.cardTitle">Plataformas personalizadas para operaciones reales</h2>
+            <p data-i18n="hero.cardText">Desde captura de datos en campo hasta dashboards web y monitoreo en vivo, Zenvik ayuda a digitalizar procesos con claridad, control y adaptabilidad.</p>
           </div>
         </div>
       </section>
 
       <section id="services" class="section container">
-        <p class="section-label">Services</p>
-        <h2>Solutions built for real operational environments</h2>
+        <p class="section-label" data-i18n="services.label">Servicios</p>
+        <h2 data-i18n="services.title">Soluciones diseñadas para entornos operativos reales</h2>
         <div class="services-grid">
           <article class="service-card">
-            <img src="./assets/images/web.jpg" alt="Custom web development service">
+            <img src="./assets/images/web.jpg" alt="Servicio de desarrollo web personalizado">
             <div class="service-content">
-              <h3>Custom Web Solutions</h3>
-              <p>Design and development of tailored web platforms for internal operations, service workflows, reporting, and business-specific digital processes.</p>
+              <h3 data-i18n="services.web.title">Desarrollo Web Personalizado</h3>
+              <p data-i18n="services.web.text">Diseño y desarrollo de plataformas web a la medida para operaciones internas, flujos de servicio, reportes y procesos digitales específicos de cada negocio.</p>
               <ul>
-                <li>Custom interfaces and workflows</li>
-                <li>Dashboards and reporting modules</li>
-                <li>Scalable web architecture</li>
+                <li data-i18n="services.web.li1">Interfaces y flujos ajustados a tu operación</li>
+                <li data-i18n="services.web.li2">Dashboards, reportes y módulos de gestión</li>
+                <li data-i18n="services.web.li3">Arquitectura web escalable</li>
               </ul>
             </div>
           </article>
 
           <article class="service-card">
-            <img src="./assets/images/transport.jpg" alt="Public transport tracking service">
+            <img src="./assets/images/transport.jpg" alt="Servicio de tracking GPS para transporte público">
             <div class="service-content">
-              <h3>Transport Tracking & Live Monitoring</h3>
-              <p>Real-time GPS tracking systems for public transportation and operational fleets, with dynamic dashboards for supervision, route analysis, and staff control.</p>
+              <h3 data-i18n="services.transport.title">Tracking GPS y Monitoreo en Tiempo Real</h3>
+              <p data-i18n="services.transport.text">Sistemas de monitoreo GPS en tiempo real para transporte público y flotas operativas, con dashboards dinámicos para supervisión, análisis de rutas y control del personal.</p>
               <ul>
-                <li>Live GPS visibility</li>
-                <li>Dynamic dashboards for decision-making</li>
-                <li>Operational control for teams and routes</li>
+                <li data-i18n="services.transport.li1">Visualización GPS en vivo</li>
+                <li data-i18n="services.transport.li2">Dashboards dinámicos para toma de decisiones</li>
+                <li data-i18n="services.transport.li3">Control operativo de equipos y recorridos</li>
               </ul>
             </div>
           </article>
 
           <article class="service-card">
-            <img src="./assets/images/traceability.jpg" alt="Cold chain and traceability service">
+            <img src="./assets/images/traceability.jpg" alt="Servicio de trazabilidad para frigoríficos y plantas de proceso">
             <div class="service-content">
-              <h3>Traceability Systems for Processing Plants</h3>
-              <p>Integrated technology for capture, control, and real-time visualization of animals and products across processing stages, improving traceability and operational reliability.</p>
+              <h3 data-i18n="services.trace.title">Trazabilidad para Frigoríficos y Plantas de Proceso</h3>
+              <p data-i18n="services.trace.text">Herramienta integral para capturar, controlar y visualizar en tiempo real la información de animales y productos a lo largo de cada etapa del proceso, fortaleciendo la trazabilidad y el control operativo.</p>
               <ul>
-                <li>Plants for slaughter, cutting, and conditioning</li>
-                <li>Multi-species support: bovine, porcine, caprine, ovine, poultry, and more</li>
-                <li>Simple web or desktop interfaces adapted to each process</li>
+                <li data-i18n="services.trace.li1">Plantas de beneficio, desposte y acondicionamiento</li>
+                <li data-i18n="services.trace.li2">Soporte multiespecie: bovino, porcino, caprino, ovino, avícola y más</li>
+                <li data-i18n="services.trace.li3">Interfaz web o desktop simple, intuitiva y adaptable</li>
               </ul>
             </div>
           </article>
@@ -98,26 +101,24 @@
       <section id="about" class="section section-dark">
         <div class="container about-grid">
           <div>
-            <p class="section-label">About Zenvik</p>
-            <h2>Built to connect software with real-world operations.</h2>
+            <p class="section-label" data-i18n="about.label">Sobre Zenvik</p>
+            <h2 data-i18n="about.title">Diseñada para conectar el software con la operación real.</h2>
           </div>
           <div>
-            <p>
-              Zenvik focuses on developing digital solutions that help organizations monitor processes, centralize information, and improve operational control. Our approach is practical, adaptable, and aligned with the realities of each client.
-            </p>
-            <p>
-              We work across industries where traceability, dashboards, process visibility, and intelligent interfaces create measurable value.
-            </p>
+            <p data-i18n="about.text1">Zenvik se enfoca en desarrollar soluciones digitales que ayudan a las organizaciones a monitorear procesos, centralizar información y mejorar el control operativo. Nuestro enfoque es práctico, adaptable y alineado con la realidad de cada cliente.</p>
+            <p data-i18n="about.text2">Trabajamos en sectores donde la trazabilidad, los dashboards, la visibilidad del proceso y las interfaces inteligentes generan valor medible.</p>
           </div>
         </div>
       </section>
 
       <section id="contact" class="section container contact-box">
-        <p class="section-label">Contact</p>
-        <h2>Ready to build a solution around your process?</h2>
-        <p>Let's talk about your operation, your information flow, and the kind of system your team actually needs.</p>
-        <a class="btn btn-primary" href="mailto:eduardo.jose881@gmail.com?subject=Zenvik%20Inquiry">Get in touch</a>
+        <p class="section-label" data-i18n="contact.label">Contacto</p>
+        <h2 data-i18n="contact.title">¿Listo para construir una solución alrededor de tu proceso?</h2>
+        <p data-i18n="contact.text">Conversemos sobre tu operación, tu flujo de información y el tipo de sistema que realmente necesita tu equipo.</p>
+        <a class="btn btn-primary" href="mailto:eduardo.jose881@gmail.com?subject=Zenvik%20Inquiry" data-i18n="contact.cta">Escríbenos</a>
       </section>
     </main>
+
+    <script src="script.js"></script>
   </body>
 </html>
