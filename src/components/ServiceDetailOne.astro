@@ -1,0 +1,62 @@
+---
+// ServiceDetailOne.astro
+import { useTranslations } from '../i18n/utils';
+
+const lang = Astro.currentLocale || 'es';
+const t = useTranslations(lang);
+---
+
+<section id="service-01" class="w-full bg-white text-bmw-black border-t border-[#e5e5e5]">
+  <div class="max-w-[1440px] mx-auto px-6 py-20 lg:py-32">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-24 relative">
+      
+      <!-- Columna Izquierda: Número y Título -->
+      <div class="md:col-span-4 lg:col-span-5">
+        <div class="sticky top-32 flex flex-col items-start">
+          <span class="text-[50px] md:text-[70px] lg:text-[90px] font-light leading-none text-bmw-blue tracking-tighter">
+            01
+          </span>
+          <h2 class="text-[36px] md:text-[48px] lg:text-[56px] font-medium leading-[1.10] tracking-tight mt-2 md:mt-4">
+            {t('services.01.title')}
+          </h2>
+        </div>
+      </div>
+
+      <!-- Columna Derecha: Contenido y Fotografía -->
+      <div class="md:col-span-8 lg:col-span-7 flex flex-col gap-10 lg:gap-14 pt-2 md:pt-4">
+        
+        <!-- Párrafo de apertura (sustituye al texto en bloque superior de la imagen referencia) -->
+        <p class="text-[16px] md:text-[18px] leading-[1.30] lg:leading-[1.40] font-normal max-w-2xl text-[#262626]">
+          {t('services.01.desc')}
+        </p>
+
+        <!-- Bloque de Fotografía Abstracta Cinemática -->
+        <div class="w-full max-w-3xl">
+          <img 
+            src="/assets/images/service-web.png" 
+            alt="Arquitectura de Código Oscuro - Desarrollo Web" 
+            class="w-full h-auto object-cover border border-[#e5e5e5]" 
+          />
+        </div>
+
+        <!-- Características/Viñetas (sustituye al bloque de texto inferior de la imagen referencia) -->
+        <div class="flex flex-col gap-4 max-w-2xl">
+          <p class="text-bmw-gray font-bold text-sm tracking-widest uppercase mb-2">{t('services.keyFeatures')}</p>
+          <ul class="list-none flex flex-col gap-4">
+            <li class="relative text-[16px] md:text-[18px] text-bmw-black leading-[1.30] pl-6 before:content-[''] before:absolute before:left-0 before:top-[10px] before:w-2 before:h-2 before:bg-bmw-blue">
+              {t('services.01.li1')}
+            </li>
+            <li class="relative text-[16px] md:text-[18px] text-bmw-black leading-[1.30] pl-6 before:content-[''] before:absolute before:left-0 before:top-[10px] before:w-2 before:h-2 before:bg-bmw-blue">
+              {t('services.01.li2')}
+            </li>
+            <li class="relative text-[16px] md:text-[18px] text-bmw-black leading-[1.30] pl-6 before:content-[''] before:absolute before:left-0 before:top-[10px] before:w-2 before:h-2 before:bg-bmw-blue">
+              {t('services.01.li3')}
+            </li>
+          </ul>
+        </div>
+        
+      </div>
+
+    </div>
+  </div>
+</section>

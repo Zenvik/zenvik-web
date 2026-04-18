@@ -1,0 +1,89 @@
+---
+// ServiceDetailFour.astro
+// Layout: Texto izquierda (número + título + párrafo + bullets) | Imagen derecha
+// Sección de fondo oscuro para romper ritmo con las secciones blancas anteriores
+import { useTranslations } from "../i18n/utils";
+
+const lang = Astro.currentLocale || "es";
+const t = useTranslations(lang);
+---
+
+<section
+  id="service-ai"
+  class="w-full bg-white text-bmw-black border-t border-[#e5e5e5]"
+>
+  <div class="max-w-[1440px] mx-auto px-6 py-20 lg:py-32">
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-16 lg:gap-24 items-start"
+    >
+      <!-- Columna Izquierda: Número, Título, Descripción y Bullets -->
+      <div class="flex flex-col justify-start pt-0 md:pt-4">
+        <!-- Número + Título -->
+        <div
+          class="flex items-start md:items-baseline gap-4 md:gap-6 flex-col md:flex-row mb-10 md:mb-14"
+        >
+          <span
+            class="text-[40px] md:text-[50px] lg:text-[60px] font-medium text-bmw-blue leading-none tracking-tighter"
+          >
+            04
+          </span>
+          <h2
+            class="text-[32px] md:text-[40px] lg:text-[48px] font-medium leading-[1.10] tracking-tight"
+          >
+            {t("services.04.title")}
+          </h2>
+        </div>
+
+        <!-- Párrafo de descripción principal -->
+        <p
+          class="text-[22px] md:text-[28px] lg:text-[34px] font-light leading-[1.30] tracking-tight text-[#262626] mb-10 md:mb-14"
+        >
+          {t("services.04.desc")}
+        </p>
+
+        <!-- Separador + label servicio -->
+        <div class="flex flex-col gap-1 border-t border-[#e5e5e5] pt-6">
+          <span
+            class="text-[15px] font-bold tracking-wide uppercase text-bmw-black"
+          >
+            Ecosistemas de IA
+          </span>
+          <span
+            class="text-[13px] font-bold tracking-widest uppercase text-bmw-blue font-mono"
+          >
+            04 — Servicio Zenvik
+          </span>
+        </div>
+
+        <!-- Bullets cuadrados BMW sobre fondo oscuro -->
+        <ul class="list-none flex flex-col gap-4 mt-10 md:mt-14 max-w-lg">
+          <li
+            class="relative text-[15px] md:text-[16px] text-bmw-black leading-[1.30] pl-6 before:content-[''] before:absolute before:left-0 before:top-[9px] before:w-2 before:h-2 before:bg-bmw-blue"
+          >
+            {t("services.04.li1")}
+          </li>
+          <li
+            class="relative text-[15px] md:text-[16px] text-bmw-black leading-[1.30] pl-6 before:content-[''] before:absolute before:left-0 before:top-[9px] before:w-2 before:h-2 before:bg-bmw-blue"
+          >
+            {t("services.04.li2")}
+          </li>
+          <li
+            class="relative text-[15px] md:text-[16px] text-bmw-black leading-[1.30] pl-6 before:content-[''] before:absolute before:left-0 before:top-[9px] before:w-2 before:h-2 before:bg-bmw-blue"
+          >
+            {t("services.04.li3")}
+          </li>
+        </ul>
+      </div>
+
+      <!-- Columna Derecha: Imagen Cinemática -->
+      <div class="w-full overflow-hidden mt-12 md:mt-0">
+        <img
+          src="/assets/images/service-ai.png"
+          alt="Ecosistema de Agentes IA - Zenvik"
+          class="w-full h-full object-cover"
+          style="aspect-ratio: 4/5;"
+        />
+      </div>
+    </div>
+  </div>
+</section>

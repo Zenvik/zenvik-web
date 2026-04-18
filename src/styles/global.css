@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bmw-blue: #1c69d4;
+  --color-bmw-focus: #0653b6;
+  --color-bmw-black: #262626;
+  --color-bmw-gray: #757575;
+  --color-bmw-silver: #bbbbbb;
+
+  --font-sans: "Inter", "Helvetica Neue", "Arial", sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: #ffffff;
+    color: var(--color-bmw-black);
+  }
+  
+  /* Reset border radius universally to match BMW sharp geometry */
+  * {
+    border-radius: 0 !important;
+  }
+}
