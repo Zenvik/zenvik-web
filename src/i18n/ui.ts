@@ -9,7 +9,7 @@ export const ui = {
   es: {
     'nav.services': 'Servicios',
     'nav.about': 'Nosotros',
-    'nav.trazabilidad': 'Trazabilidad',
+    'nav.contacto': 'Contacto',
     'nav.monitoreo': 'Monitoreo',
     'nav.contact': 'Contacto',
     'hero.tagline': 'Soluciones digitales para operación, control y trazabilidad',
@@ -69,12 +69,12 @@ export const ui = {
     'contact.success.title': '¡Mensaje enviado!',
     'contact.success.desc': 'Gracias por contactarnos. Te responderemos en breve.',
     'contact.info.email': 'zenvik.contact@gmail.com',
-    'contact.info.location': 'Colombia',
+    'contact.info.location': 'Medellín, Colombia',
   },
   en: {
     'nav.services': 'Services',
     'nav.about': 'About Us',
-    'nav.trazabilidad': 'Traceability',
+    'nav.contacto': 'Contact Us',
     'nav.monitoreo': 'Monitoring',
     'nav.contact': 'Contact',
     'hero.tagline': 'Digital solutions for operations, control, and traceability',

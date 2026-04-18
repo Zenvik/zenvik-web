@@ -1,47 +1,62 @@
 ---
 // Hero.astro
-import { useTranslations } from '../i18n/utils';
+import { useTranslations } from "../i18n/utils";
 
-const lang = Astro.currentLocale || 'es';
+const lang = Astro.currentLocale || "es";
 const t = useTranslations(lang);
 ---
 
-<section class="relative w-full h-[85vh] min-h-[600px] flex items-center justify-center overflow-hidden bg-black text-white">
+<section
+  class="relative w-full min-h-[85vh] flex items-center justify-center bg-black text-white py-24 md:py-0"
+>
   <!-- Fondo Generado -->
   <div class="absolute inset-0 w-full h-full">
-    <img 
-      src="/assets/images/hero-bg.png" 
-      alt="Cinematic Background" 
+    <img
+      src="/assets/images/hero-bg.png"
+      alt="Cinematic Background"
       class="w-full h-full object-cover opacity-60"
     />
     <!-- Overlay de oscurecimiento adicional para mejorar la legibilidad del texto en blanco -->
-    <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/80"></div>
+    <div
+      class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/80"
+    >
+    </div>
   </div>
 
   <!-- Contenido Central Estilo Redo + Tipografía BMW -->
-  <div class="relative z-10 container mx-auto px-6 text-center flex flex-col items-center max-w-4xl pt-8">
-    
+  <div
+    class="relative z-10 container mx-auto px-6 text-center flex flex-col items-center max-w-4xl"
+  >
     <p class="text-bmw-silver font-bold uppercase tracking-widest text-sm mb-6">
-      {t('hero.tagline')}
+      {t("hero.tagline")}
     </p>
 
     <!-- La tensión tipográfica: display 300 con mayúsculas monumentales -->
-    <h1 class="font-light text-[36px] md:text-[50px] lg:text-[60px] leading-[1.15] md:leading-[1.25] uppercase tracking-tight mb-8">
-      {t('hero.title')}
+    <h1
+      class="font-light text-[36px] md:text-[50px] lg:text-[60px] leading-[1.15] md:leading-[1.25] uppercase tracking-tight mb-8"
+    >
+      {t("hero.title")}
     </h1>
 
     <p class="text-lg md:text-xl text-gray-300 mb-12 max-w-3xl leading-relaxed">
-      {t('hero.description')}
+      {t("hero.description")}
     </p>
 
-    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
-      <a href="#about-and-services" class="w-full sm:w-auto px-8 py-4 bg-bmw-blue hover:bg-bmw-focus text-white font-bold text-base transition-colors text-center border border-bmw-blue hover:border-bmw-focus">
-        {t('hero.button.services')}
+    <div
+      class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto"
+    >
+      <a
+        href="#services"
+        class="w-full sm:w-auto px-8 py-4 bg-bmw-blue hover:bg-bmw-focus text-white font-bold text-base transition-colors text-center border border-bmw-blue hover:border-bmw-focus"
+      >
+        {t("hero.button.services")}
       </a>
-      <a href="#contact" class="w-full sm:w-auto px-8 py-4 bg-transparent border border-white hover:bg-white hover:text-bmw-black text-white font-bold text-base transition-all text-center">
-        {t('hero.button.contact')}
+      <a
+        href="#contact"
+        class="w-full sm:w-auto px-8 py-4 bg-transparent border border-white hover:bg-white hover:text-bmw-black text-white font-bold text-base transition-all text-center"
+      >
+        {t("hero.button.contact")}
       </a>
     </div>
-
   </div>
 </section>
