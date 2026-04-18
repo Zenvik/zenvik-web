@@ -1,0 +1,38 @@
+---
+// AboutAndServices.astro
+import { useTranslations } from "../i18n/utils";
+
+const lang = Astro.currentLocale || "es";
+const t = useTranslations(lang);
+---
+
+<section id="about" class="w-full bg-white text-bmw-black">
+  <!-- Bloque Superior: About (Brand Guidelines Reference) -->
+  <div
+    class="max-w-[1440px] mx-auto px-6 py-20 lg:py-32 border-b border-[#e5e5e5]"
+  >
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-24">
+      <!-- Columna Izquierda: Títulos -->
+      <div class="md:col-span-4 lg:col-span-5">
+        <p
+          class="text-bmw-gray font-bold text-sm tracking-widest uppercase mb-4"
+        >
+          {t("about.subtitle")}
+        </p>
+        <h2
+          class="text-[32px] md:text-[40px] lg:text-[48px] font-bold md:font-medium leading-[1.15] md:leading-[1.10] tracking-tight uppercase"
+        >
+          {t("about.title")}
+        </h2>
+      </div>
+
+      <!-- Columna Derecha: Párrafos -->
+      <div
+        class="md:col-span-8 lg:col-span-7 flex flex-col justify-center max-w-2xl text-[16px] md:text-[18px] leading-[1.30] text-bmw-black font-normal gap-6 space-y-2"
+      >
+        <p>{t("about.p1")}</p>
+        <p>{t("about.p2")}</p>
+      </div>
+    </div>
+  </div>
+</section>
