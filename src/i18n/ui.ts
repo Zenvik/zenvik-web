@@ -68,7 +68,7 @@ export const ui = {
     'contact.sending': 'Enviando...',
     'contact.success.title': '¡Mensaje enviado!',
     'contact.success.desc': 'Gracias por contactarnos. Te responderemos en breve.',
-    'contact.info.email': 'hola@zenvik.com',
+    'contact.info.email': 'zenvik.contact@gmail.com',
     'contact.info.location': 'Colombia',
   },
   en: {
